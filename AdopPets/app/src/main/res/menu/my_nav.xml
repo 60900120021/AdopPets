@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/Star2Fragment">
+
+    <fragment
+        android:id="@+id/Star2Fragment"
+        android:name="com.example.adoppets.Star2Fragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_activity_star2" >
+        <action
+            android:id="@+id/action_homeFragment_to_secondFragment"
+            app:destination="@id/secondFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.example.adoppets.Star1Fragment"
+        android:label="First Fragment"
+        tools:layout="@layout/fragment_activity_star1" >
+        <action
+            android:id="@+id/action_firstFragment_to_homeFragment"
+            app:destination="@id/Star2Fragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.example.adoppets.Star3Fragment"
+        android:label="Second Fragment"
+        tools:layout="@layout/fragment_activity_star3">
+        <action
+            android:id="@+id/action_secondFragment_to_homeFragment"
+            app:destination="@id/Star2Fragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+
+    </fragment>
+</navigation>
